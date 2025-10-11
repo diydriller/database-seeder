@@ -3,16 +3,26 @@
     <id>com.github.diydriller.databaseseeder</id>
     <name>database-seeder</name>
     <vendor>diydriller</vendor>
+    <vendor
+            url="https://github.com/diydriller/database-seeder"
+            email="hyunjong8723@gmail.com">
+            diydriller
+    </vendor>
+    <description>
+        An IntelliJ-based tool that generates fake data and inserts it into your database automatically.
+        This plugin helps developers easily populate tables with realistic test data
+    </description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.diydriller.databaseseeder.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow
+                id="DB Seeder"
+                anchor="right"
+                factoryClass="com.github.diydriller.databaseseeder.ui.SeederToolWindowFactory"
+                canCloseContents="false"
+                stripeTitle="Database Seeder"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.diydriller.databaseseeder.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>

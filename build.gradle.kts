@@ -33,6 +33,9 @@ repositories {
 dependencies {
     testImplementation(libs.junit)
 
+    implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("io.github.serpro69:kotlin-faker:1.16.0")
+
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
     intellijPlatform {
         create(providers.gradleProperty("platformType"), providers.gradleProperty("platformVersion"))
